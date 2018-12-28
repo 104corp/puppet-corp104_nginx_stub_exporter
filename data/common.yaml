@@ -1,0 +1,3 @@
+corp104_nginx_stub_exporter::remote_source: ~
+corp104_nginx_stub_exporter::http_proxy: ~
+corp104_nginx_stub_exporter::install_path: '/opt/nginx-stub-exporter'
