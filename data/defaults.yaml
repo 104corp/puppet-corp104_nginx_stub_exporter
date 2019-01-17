@@ -1,0 +1,24 @@
+---
+corp104_nginx_stub_exporter::package_name: 'nginx-prometheus-exporter'
+corp104_nginx_stub_exporter::version: '0.2.0'
+corp104_nginx_stub_exporter::package_ensure: 'installed'
+corp104_nginx_stub_exporter::install_method: 'url'
+corp104_nginx_stub_exporter::download_url: 'https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.2.0/nginx-prometheus-exporter-0.2.0-linux-amd64.tar.gz'
+corp104_nginx_stub_exporter::download_extension: 'tar.gz'
+corp104_nginx_stub_exporter::http_proxy: ''
+corp104_nginx_stub_exporter::user: 'nginx-prometheus-exporter'
+corp104_nginx_stub_exporter::group: 'nginx-prometheus-exporter'
+corp104_nginx_stub_exporter::manage_user: true
+corp104_nginx_stub_exporter::extra_groups: []
+corp104_nginx_stub_exporter::manage_group: true
+corp104_nginx_stub_exporter::bin_dir: '/usr/local/bin'
+corp104_nginx_stub_exporter::init_style: '%{facts.service_provider}'
+corp104_nginx_stub_exporter::service_name: 'nginx-prometheus-exporter'
+corp104_nginx_stub_exporter::service_ensure: 'running'
+corp104_nginx_stub_exporter::service_enable: true
+corp104_nginx_stub_exporter::manage_service: true
+corp104_nginx_stub_exporter::restart_on_change: true
+corp104_nginx_stub_exporter::extra_options: ''
+corp104_nginx_stub_exporter::nginx_scrape_uri: 'http://127.0.0.1/stub_status'
+#corp104_nginx_stub_exporter::env_file_path: '/etc/default'
+corp104_nginx_stub_exporter::arch: '%{facts.architecture}'

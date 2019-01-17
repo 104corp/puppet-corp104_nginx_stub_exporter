@@ -43,13 +43,33 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class corp104_nginx_stub_exporter (
-  String $install_path,
-  Optional[String] $remote_source,
+  String    $package_name,
+  String    $version,
+  String    $package_ensure,
+  String    $install_method,
+  String    $download_url,
+  String    $download_extension,
   Optional[String] $http_proxy,
-){
+  String    $user,
+  String    $group,
+  Boolean   $manage_user,
+  Array     $extra_groups,
+  Boolean   $manage_group,
+  String    $bin_dir,
+  String    $init_style,
+  String    $service_name,
+  String    $service_ensure,
+  Boolean   $service_enable,
+  Boolean   $manage_service,
+  Boolean   $restart_on_change,
+  Optional[String] $extra_options,
+  String    $nginx_scrape_uri,
+  String    $env_file_path,
+  Hash[String,Scalar] $extra_env_vars = {},
+) {
   contain corp104_nginx_stub_exporter::install
-  # contain corp104_nginx_stub_exporter::service
+  contain corp104_nginx_stub_exporter::service
 
-  # Class['::corp104_nginx_stub_exporter::install']
-  # -> Class['::corp104_nginx_stub_exporter::service']
+  Class['::corp104_nginx_stub_exporter::install']
+  ~> Class['::corp104_nginx_stub_exporter::service']
 }

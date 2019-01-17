@@ -1,0 +1,5 @@
+---
+corp104_nginx_stub_exporter::version: '2.2.0'
+corp104_nginx_stub_exporter::install_method: 'package'
+corp104_nginx_stub_exporter::bin_dir: '/usr/bin'
+corp104_nginx_stub_exporter::env_file_path: '/etc/default'
