@@ -32,20 +32,11 @@ All parameters for the ntp module are contained within the main `::corp104_nginx
 include '::corp104_nginx_stub_exporter'
 ```
 
-### Install specially python version. default '3.7.0'
-
-```puppet
-class { 'corp104_nginx_stub_exporter':
-  python_version => '3.7.0',
-}
-```
-
 ### Download package to Use a Proxy
 
 ```puppet
 class { 'corp104_nginx_stub_exporter':
   http_proxy   => 'http://change.proxy.com:3128',
-  python_version => '3.7.0',
 }
 ```
 

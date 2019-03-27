@@ -1,7 +1,7 @@
 {
   "name": "corp104_nginx_stub_exporter",
   "description": "corp104_nginx_stub_exporter Module for Debian and Ubuntu.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "104corp",
   "summary": "Install, deploysm, and configures nginx_stub_exporter.",
   "license": "Apache-2.0",
@@ -10,7 +10,6 @@
   "issues_url": "https://github.com/104corp/corp104_nginx_stub_exporter/issues",
     "tags": [
     "104",
-    "python",
     "puppet"
   ],
   "dependencies": [
