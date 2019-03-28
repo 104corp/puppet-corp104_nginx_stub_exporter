@@ -1,3 +1,7 @@
+## 2019-03-28 - Release v1.2.0
+
+- Fix sysv bug
+
 ## 2019-03-27 - Release v1.1.0
 
 - Fix for CentOS with sysv
