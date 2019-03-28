@@ -93,7 +93,7 @@ define corp104_nginx_stub_exporter::daemon (
           notify  => $notify_service,
         }
       }
-      'sysv' : {
+      'sysv','redhat' : {
         file { "/etc/init.d/${name}":
           mode    => '0555',
           owner   => 'root',
