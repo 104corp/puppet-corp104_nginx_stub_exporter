@@ -75,7 +75,7 @@ define corp104_nginx_stub_exporter::daemon (
           mode    => '0444',
           owner   => 'root',
           group   => 'root',
-          content => template('${module_name}/daemon.upstart.erb'),
+          content => template("${module_name}/daemon.upstart.erb"),
           notify  => $notify_service,
         }
         file { "/etc/init.d/${name}":
@@ -89,7 +89,7 @@ define corp104_nginx_stub_exporter::daemon (
       'systemd' : {
         include 'systemd'
         systemd::unit_file {"${name}.service":
-          content => template('corp104_nginx_stub_exporter/daemon.systemd.erb'),
+          content => template("${module_name}/daemon.systemd.erb"),
           notify  => $notify_service,
         }
       }
@@ -98,7 +98,7 @@ define corp104_nginx_stub_exporter::daemon (
           mode    => '0555',
           owner   => 'root',
           group   => 'root',
-          content => template('${module_name}/daemon.sysv.erb'),
+          content => template("${module_name}/daemon.sysv.erb"),
           notify  => $notify_service,
         }
       }
@@ -107,7 +107,7 @@ define corp104_nginx_stub_exporter::daemon (
           mode    => '0555',
           owner   => 'root',
           group   => 'root',
-          content => template('${module_name}/daemon.debian.erb'),
+          content => template("${module_name}/daemon.debian.erb"),
           notify  => $notify_service,
         }
       }
